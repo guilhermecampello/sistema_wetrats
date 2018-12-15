@@ -1,0 +1,50 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="criacao_usuario.css">
+</head>
+
+<form action="novousuario_page.php" style="border:1px solid #ccc">
+  <div class="container">
+    <h1>Novo usuário</h1>
+    <p>Preencha os campos abaixo para criar seu perfil.</p>
+    <hr>
+
+    <label for="Nome"><b>Nome Completo</b></label>
+    <input type="text" placeholder="Digite seu nome e sobrenome..." name="Nome" required>
+    
+    <label for="Data de Nascimento"><b>Data de Nascimento</b></label>
+    <input type="date" name="data de nascimento" max="1979-12-31" min=" 2004-12-31" required><br>
+    
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Digite seu Email..." name="email" required>
+
+    <label for="senha"><b>Senha</b></label>
+    <input type="password" placeholder="Digite sua senha..." name="senha" required>
+
+    <label for="confirma_senha"><b>Confirmação de senha</b></label>
+    <input type="password" placeholder="Digite novamente sua senha..." name="confirma_senha" required>
+
+    <label for="celular"><b>Celular</b></label>
+    <input type="text" placeholder="Digite seu número de celular..." name="celular" required>
+
+    <label for="RG"><b>RG</b></label>
+    <input type="text" placeholder="Digite seu RG..." name="RG" required>
+
+    <label for="Número USP"><b>Número USP</b></label>
+    <input type="text" placeholder="Digite seu Número USP..." name="Número USP" >
+
+    <label for="Endereço"><b>Endereço</b></label>
+    <input type="text" placeholder="Digite seu Endereço..." name="Endereço" >
+
+    <label>
+      <input type="radio" name="nivel" value="1"> DM <br>
+      <input type="radio" name="nivel" value="2"> Técnico <br>
+      <input type="radio" name="nivel" value="3"> Atleta <br>
+    </label>
+
+
+    <div class="clearfix">
+      <button type="button" class="cancelbtn">Cancelar</button>
+      <button type="button" class="signupbtn">Criar</button>
+    </div>
+  </div>
+</form>
