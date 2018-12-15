@@ -1,0 +1,42 @@
+Banco de Dados
+mysql.ecoswim.com.br
+Usuário: ecoswim05
+Senha: wetrats05
+
+Tabelas:
+(tabelas criadas no banco de dados)
+	-Usuário;
+	-Dívidas;
+	-Competições;
+
+Funcionalidades:
+(outras funcionalidades)
+	-Treinos;
+	-Calendário;
+
+
+Usuário:
+	Cada usuário é gerado e pode conter 3 níveis de permissão no sistema:
+		-Nível 1:Atleta;
+		-Nível 2:Técnico;
+		-Nível 3:DM’s;
+
+	Campos: Id(Primary Key), Nome Completo, Documento, Email, Senha, Nível;
+	
+Dívidas:
+	Cada entrada da tabela corresponde a uma dívida e é relacionada a um usuário;
+	Campos: Id(Primary Key), Descrição, Id_Usuario(Foreign Key), Valor;
+	Formulário: No formulário para criar a dívida, terá um campo onde será possível selecionar por checkbox as pessoas que devem ter essa dívida incluída, e um botão para marcar todos os checkboxes; 
+
+Competições:
+	Para cada competição, criar uma tabela;
+	Formulário contendo opção para selecionar a competição que será feita a inscrição, e tempos para balizamento;
+	Posteriormente, gerar um excel com as informações do banco de dados;
+	Campos:Id(Primary Key), Id_Usuario(Foreign Key), Programa de Provas da Competição;
+
+Treinos:
+	Entrada digitada ou foto?
+	
+Calendário:
+	Datas importantes, definidas pelos DM’s e/ou técnico apareceram no calendário;
+	Possibilidade do usuário incluir eventos que ele queira no próprio calendário;
