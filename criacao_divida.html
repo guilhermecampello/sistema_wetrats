@@ -1,0 +1,39 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="criacao_divida.css">
+</head>
+
+<form action="novadivida_page.php" style="border:1px solid #ccc">
+  <div class="container">
+    <h1>Nova dívida</h1>
+    <p>Preencha os campos abaixo para lançar novas cobranças a um ou mais perfis.</p>
+    <hr>
+
+    <label for="ListadeNomes"><b>Nome(s) da(s) pessoa(s) a serem cobradas:</b></label>
+    <!-- for i in listadeusuarios ... -->
+        <br>
+        <input type="checkbox" name="nomes" value="Ana">Ana<br>      
+        <input type="checkbox" name="nomes" value="Henrique">Henrique<br>      
+        <input type="checkbox" name="nomes" value="Daniel">Daniel<br>      
+        <br>      
+    </select>
+    
+    <label for="valor"><b>Valor:</b></label>
+    R$
+    <input type="number" placeholder="Digite o valor da dívida..." name="celular" required>
+    <br>
+    
+    <label for="descrição"><b>Descrição:</b></label>
+    <input type="text" placeholder="Digite uma descrição..." name="RG" required>
+    <br>
+
+    <label>
+      <input type="radio" name="status" value="NP"> Não Pago
+      <input type="radio" name="status" value="P"> Pago <br>
+    </label>
+
+    <div class="clearfix">
+      <button type="button" class="cancelbtn">Cancelar</button>
+      <button type="button" class="signupbtn">Criar</button>
+    </div>
+  </div>
+</form>
