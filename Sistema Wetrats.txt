@@ -1,42 +1,42 @@
 Banco de Dados
 mysql.ecoswim.com.br
-Usu·rio: ecoswim05
+Usu√°rio: ecoswim05
 Senha: wetrats05
 
 Tabelas:
 (tabelas criadas no banco de dados)
-	-Usu·rio;
-	-DÌvidas;
-	-CompetiÁıes;
+	-Usu√°rio;
+	-D√≠vidas;
+	-Competi√ß√µes;
 
 Funcionalidades:
 (outras funcionalidades)
 	-Treinos;
-	-Calend·rio;
+	-Calend√°rio;
 
 
-Usu·rio:
-	Cada usu·rio È gerado e pode conter 3 nÌveis de permiss„o no sistema:
-		-NÌvel 1:Atleta;
-		-NÌvel 2:TÈcnico;
-		-NÌvel 3:DMís;
+Usu√°rio:
+	Cada usu√°rio √© gerado e pode conter 3 n√≠veis de permiss√£o no sistema:
+		-N√≠vel 1:Atleta;
+		-N√≠vel 2:T√©cnico;
+		-N√≠vel 3:DM's;
 
-	Campos: Id(Primary Key), Nome Completo, Documento, Email, Senha, NÌvel;
+	Campos: Id(Primary Key), Nome Completo, Documento, Email, Senha, N√≠vel;
 	
-DÌvidas:
-	Cada entrada da tabela corresponde a uma dÌvida e È relacionada a um usu·rio;
-	Campos: Id(Primary Key), DescriÁ„o, Id_Usuario(Foreign Key), Valor;
-	Formul·rio: No formul·rio para criar a dÌvida, ter· um campo onde ser· possÌvel selecionar por checkbox as pessoas que devem ter essa dÌvida incluÌda, e um bot„o para marcar todos os checkboxes; 
+D√≠vidas:
+	Cada entrada da tabela corresponde a uma d√≠vida e √© relacionada a um usu√°rio;
+	Campos: Id(Primary Key), Descri√ß√£o, Id_Usuario(Foreign Key), Valor;
+	Formul√°rio: No formul√°rio para criar a d√≠vida, ter√° um campo onde ser√° poss√≠vel selecionar por checkbox as pessoas que devem ter essa d√≠vida inclu√≠da, e um bot√£o para marcar todos os checkboxes; 
 
-CompetiÁıes:
-	Para cada competiÁ„o, criar uma tabela;
-	Formul·rio contendo opÁ„o para selecionar a competiÁ„o que ser· feita a inscriÁ„o, e tempos para balizamento;
-	Posteriormente, gerar um excel com as informaÁıes do banco de dados;
-	Campos:Id(Primary Key), Id_Usuario(Foreign Key), Programa de Provas da CompetiÁ„o;
+Competi√ß√µes:
+	Para cada competi√ß√µo, criar uma tabela;
+	Formul√°rio contendo op√ß√£o para selecionar a competi√ß√£o que ser√° feita a inscri√ß√£o, e tempos para balizamento;
+	Posteriormente, gerar um excel com as informa√ß√µes do banco de dados;
+	Campos:Id(Primary Key), Id_Usuario(Foreign Key), Programa de Provas da Competi√ß√£o;
 
 Treinos:
 	Entrada digitada ou foto?
 	
-Calend·rio:
-	Datas importantes, definidas pelos DMís e/ou tÈcnico apareceram no calend·rio;
-	Possibilidade do usu·rio incluir eventos que ele queira no prÛprio calend·rio;
+Calend√°rio:
+	Datas importantes, definidas pelos DM's e/ou t√©cnico apareceram no calend√°rio;
+	Possibilidade do usu√°rio incluir eventos que ele queira no pr√≥prio calend√°rio;

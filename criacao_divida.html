@@ -8,14 +8,38 @@
     <p>Preencha os campos abaixo para lançar novas cobranças a um ou mais perfis.</p>
     <hr>
 
-    <label for="ListadeNomes"><b>Nome(s) da(s) pessoa(s) a serem cobradas:</b></label>
+    <h3><b>Nome(s) da(s) pessoa(s) a serem cobradas:</b></h3>
     <!-- for i in listadeusuarios ... -->
         <br>
         <input type="checkbox" name="nomes" value="Ana">Ana<br>      
         <input type="checkbox" name="nomes" value="Henrique">Henrique<br>      
         <input type="checkbox" name="nomes" value="Daniel">Daniel<br>      
-        <br>      
-    </select>
+        <br>
+        
+        <!-- Adiciona automaticamente todos os usuários cadstrados no banco de dados-->
+        <!--?php
+          $conn = mysqli_connect("mysql.ecoswim.com.br", "ecoswim05", "wetrats05", "ecoswim05");
+          $sql = "SELECT ID, Nome from usuarios";
+          $resultado = $conn-> query($sql);
+
+          if ($resultado-> num_rows > 0){
+            while($row = $resultado-> fetch_assoc()){
+              echo "<input type='checkbox' name="nomes" id='".$row["ID"]."' value='".$row["ID"]."'><label for='".$row["ID"]."'>".$row["Nome"]."</label>";
+            }
+          }
+          $conn-> close();
+        ?-->
+        <script language="JavaScript">
+          function toggle(){
+            checkboxes = document.getElementsByName('nomes');
+            for (var i=0; i<checkboxes.length;i++){
+              checkboxes[i].checked = true;
+            }
+          }
+        </script>
+        <a  href ="#" name="btn" onClick="toggle()">Selecionar Todos</a>
+        <br>
+
     
     <label for="valor"><b>Valor:</b></label>
     R$
