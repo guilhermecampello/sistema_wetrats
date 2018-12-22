@@ -40,6 +40,39 @@ Treinos:
 Calendário:
 	Datas importantes, definidas pelos DM's e/ou técnico apareceram no calendário;
 	Possibilidade do usuário incluir eventos que ele queira no próprio calendário;
+	Contagem regressiva, o usuário escolhe datas para contagem regressiva;
+
+Páginas Área Restrita
+-Perfil
+	-> Contém algumas informações do usuário;
+	-> Botão para editar seus registros;
+	-> Detalhamento do financeiro;
+
+-Calendário
+	-> Calendário;
+	-> Área para o usuário adicionar eventos dele;
+	-> Contagem regressiva;
+
+-Competições
+	-> Próximas competições com balizamento aberto;
+	-> Campo para balizamento;
+
+-Performances
+	-> Definir perfomances tanto em competições quanto em treinos;
+
+-Treinos
+	-> Visualizar o treino pelo dia;
+	
+-Gerenciamento(Só acessável pelos DMs)
+	-> Adicionar ou editar dívidas;
+	-> Criar competição;
+	-> Gerar planilha com o balizamento completo;
+	-> Definir data importante no calendário;
+
+-Gerenciamento(Só acessável pelo Técnico)
+	-> Incluir os treinos;
+	-> Definir datas importantes no calendário;
+
 
 
 RGB

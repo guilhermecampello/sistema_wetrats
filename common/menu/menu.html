@@ -1,0 +1,26 @@
+<div id="menu_" class="menu" >
+    <div class="container-fluid" style="background-color: rgb(15, 15, 54)">
+        <div class="row">
+            <div class="col-xs-1" style="margin-left:5em;">
+                <img style="width:5em;" src="/common/images/wetrats_reduzido.png">
+            </div>
+            <div class="col-sm-8 text-right menu-1" style="float: right; margin-right: 4em;">
+                <ul>
+                    <li><a style="color: rgb(255,187,0); font-size:16px;" href="/perfil/index.php">Perfil</a></li>
+                    <li><a style="color: rgb(255,187,0); font-size:16px;" href="/calendario/index.php">Calendário</a></li>
+                    <li><a style="color: rgb(255,187,0); font-size:16px;" href="/competicoes/index.htmlphp">Competições</a></li>
+                    <li><a style="color: rgb(255,187,0); font-size:16px;" href="/perfomances/index.php">Performances</a></li>
+                    <li><a style="color: rgb(255,187,0); font-size:16px;" href="/treinos/index.php">Treinos</a></li>
+                    <!--?php
+                    if ($_SESSION['Nivel'] == 2){
+                        echo '<li><a style="color: rgb(255,187,0); font-size:16px;" href="/gerenciamento_tecnico/index.php">Gerenciamento</a></li>';
+                    } elseif ($_SESSION['Nivel'] == 3) {
+                        echo '<li><a style="color: rgb(255,187,0); font-size:16px;" href="/gerenciamento_dm/index.php">Gerenciamento</a></li>';
+                    }
+                    ?-->
+                    <li><a style="color: rgb(255,187,0); font-size:16px;" href="../logout.php">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
