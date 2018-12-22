@@ -40,3 +40,8 @@ Treinos:
 Calendário:
 	Datas importantes, definidas pelos DM's e/ou técnico apareceram no calendário;
 	Possibilidade do usuário incluir eventos que ele queira no próprio calendário;
+
+
+RGB
+Azul 0, 0, 46
+Amarelo 255, 187, 0
