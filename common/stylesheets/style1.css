@@ -137,7 +137,11 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .fh5co-nav a {
   padding: 5px 10px;
-  color: #fff;
+  color: rgb(255, 187, 0); 
+  font-size:16px;
+}
+.fh5co-nav a:hover {
+  color: rgb(253, 206, 77);
 }
 @media screen and (max-width: 768px) {
   .fh5co-nav .menu-1 {
@@ -155,17 +159,17 @@ h1, h2, h3, h4, h5, h6, figure {
   display: inline;
 }
 .fh5co-nav ul li a {
-  font-size: 12px;
+  font-size:16px;
   padding: 10px 10px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255, 187, 0); 
   letter-spacing: 1px;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
-.fh5co-nav ul li a:hover, .fh5co-nav ul li a:focus, .fh5co-nav ul li a:active {
-  color: white;
+.fh5co-nav ul li a:hover {
+  text-shadow: 0 0 #fff;
 }
 .fh5co-nav ul li.has-dropdown {
   position: relative;

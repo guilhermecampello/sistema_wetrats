@@ -170,3 +170,35 @@ input, textarea {
 }
 
 /*# sourceMappingURL=style.css.map */
+.menu-icon{
+  display: none;
+  float: right;
+}
+.fh5co-nav br {
+  display: none;
+}
+
+@media screen and (max-width: 1040px){
+  .fh5co-nav a {
+    display: none;
+  }
+  .menu-icon {
+    display: block !important;
+    font-size: 20px !important;
+  }
+}
+@media screen and (max-width: 1040px){
+  .fh5co-nav.responsive a.menu-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .fh5co-nav.responsive a{
+    float: none;
+    display: block;
+    text-align: right;
+  }
+  .fh5co-nav.responsive br {
+    display: block;
+  }
+}
