@@ -1,0 +1,75 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="../common/stylesheets/styles.css">
+</head>
+
+<form action="inscricaocompeticao_page.php" style="border:1px solid #ccc">
+  <div class="container">
+    <h1>Nova inscrição</h1>
+    <p>Preencha os campos abaixo para realizar a incrição em uma competição.</p>
+    <hr>
+
+    <!-- Adiciona automaticamente todos os usuários cadastrados no banco de dados-->
+        <?php
+          $conn = mysqli_connect("mysql.ecoswim.com.br", "ecoswim05", "wetrats05", "ecoswim05");
+          $sql = "SELECT ID, Nome from usuarios";
+          $resultado = $conn->query($sql);
+
+    <h3><b>Nome do atleta:</b></h3>
+        <select>
+
+            <?php while($row1 = mysqli_fetch_array($resultado)):;?>
+
+            <option value="<?php echo $row1[0];?>"><?php echo $row1[1];?></option>
+
+            <?php endwhile;?>
+
+        </select>
+    
+        <br>
+    
+    <label for="competição"><b>Competição:</b></label>
+    <!-- Adiciona automaticamente todas as competições cadastradas no banco de dados -->
+        <?php
+        $conn = mysqli_connect("mysql.ecoswim.com.br", "ecoswim05", "wetrats05", "ecoswim05"); 
+          $sql2 = "SELECT ID, Nome from competições";
+          $resultado2 = $conn-> query($sql2);
+        ?>
+
+        <select>
+
+            <?php while($row2 = mysqli_fetch_array($resultado2)):;?>
+
+            <option value="<?php echo $row2[0];?>"><?php echo $row2[1];?></option>
+
+            <?php endwhile;?>
+
+        </select>
+
+    <p>Para se inscrever, digite o tempo de balizamento nas provas que desejar competir. Exemplo: 32"99 (trinta e dois segundos e 99 centésimos)</p>
+    
+    <label> <b>50 Borbo</b> </label>
+    <input type="number" placeholder="Digite o tempo de balizamento..." name="50Borbo" required>
+    <br>
+
+    <label> <b>50 Costas</b> </label>
+    <input type="number" placeholder="Digite o tempo de balizamento..." name="50Costas" required>
+    <br>
+
+    <label> <b>50 Peito</b> </label>
+    <input type="number" placeholder="Digite o tempo de balizamento..." name="50Peito" required>
+    <br>
+
+    <label> <b>50 Livre</b> </label>
+    <input type="number" placeholder="Digite o tempo de balizamento..." name="50Livre" required>
+    <br>
+
+    <label> <b>100 Medley</b> </label>
+    <input type="number" placeholder="Digite o tempo de balizamento..." name="100Medley" required>
+    <br>
+
+    <div class="clearfix">
+      <button type="button" class="cancelbtn">Cancelar</button>
+      <button type="button" class="signupbtn">Criar</button>
+    </div>
+  </div>
+</form>
