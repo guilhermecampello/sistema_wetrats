@@ -1,3 +1,12 @@
+<?php
+  
+  if (isset($_SESSION)) session_destroy();
+  
+  session_start();
+  
+  
+?>
+
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="/common/stylesheets/styles.css">

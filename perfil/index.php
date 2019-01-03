@@ -1,16 +1,18 @@
-<!--?php
-    // Inica a sessão, caso não exista
-    if (!isset($_SESSION)) session_start();
+<?php
+    // Inicia a sessão caso nao esteja iniciada    
+    if (!isset($_SESSION)) {
+         session_start();
+    }
 
     // Verifica se existe ID da sessão
-    if(!isset($_SESSION['ID'])){
+    //if(!isset($_SESSION['ID'])){
         //Destrói a sessão por segurança
-        session_destroy();
+        //session_destroy();
 
         //Redireciona para o login
-        header("Location: ../index.html"); exit;
-    }
-?-->
+        //header("Location: ../index.php"); exit;
+
+?>
 
 <html>
 <head>
@@ -31,7 +33,7 @@
    
 
 <div>
-<!--?php
+<?php
     echo "<h1>Área Restrita</h1>";
     $msg = "Olá ";
     if ($_SESSION['Nivel'] == 1){
@@ -43,7 +45,7 @@
     }
 
     echo "<p>".$msg."</p>";
-?-->
+?>
 </div>
 </div>
 
