@@ -15,7 +15,7 @@
   </nav>
   <div class="container-fluid" style="padding-top:60px;">
     <div class="row">
-      <form action="usuario.php" class="col-md-12">
+      <form method="post" action="index.php" class="col-md-12">
       
         <h1>Novo usuário</h1>
         <p>Preencha os campos abaixo para criar seu perfil.</p>
@@ -25,9 +25,20 @@
             <label for="Nome"><b>Nome Completo</b></label>
             <input class="form-control" type="text" placeholder="Digite seu nome e sobrenome..." name="Nome" required>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-3">
             <label for="Data de Nascimento"><b>Data de Nascimento</b></label>
             <input class="form-control" type="text" name="data de nascimento" placeholder="DD/MM/AAAA" required>
+          </div>
+          <div class="col-md-3">
+            <label><b>Sexo:</b></label><br>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input class="custom-control-input" type="radio" name="sexo" id="s1" value="M"> 
+              <label for="s1" class="custom-control-label" style="padding-left:10px;">Masculino</label> 
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input class="custom-control-input" type="radio" name="sexo" id="s2" value="F"> 
+              <label for="s2" class="custom-control-label" style="padding-left:10px;">Feminino</label> 
+            </div>
           </div>
         </div>
 
