@@ -132,3 +132,23 @@
 </script>
 </body>
 </html>
+
+<?php
+
+if ($_POST){
+  $nome = $_POST['nome'];
+  $sexo = $_POST['sexo'];
+  $data_de_nascimento = $_POST['data_de_nascimento'];
+  $email = $_POST['email'];
+  $senha = $_POST['senha'];
+  $celular = $_POST['celular'];
+  $RG = $_POST['RG'];
+  $NUSP = $_POST['NUSP'];
+  $endereco = $_POST['endereco'];
+  $nivel = $_POST['nivel'];
+  $con = mysqli_connect('localhost', 'root', '', 'sistema_wetrats');
+  $sql = "INSERT INTO usuarios (nome,sexo,data_de_nascimento,email,senha,celular,RG,NUSP,endereco,Nivel) VALUES ('".$nome."','".$sexo."','".$data_de_nascimento."','".$email."','".$senha."','".$celular."','".$RG."','".$NUSP."','".$endereco."','".$nivel."')";
+  $query = mysqli_query($con,$sql);
+  echo "$sql";
+  }
+?>
