@@ -72,7 +72,9 @@
     }
 
     echo "<p>".$msg."</p>";
-    echo '<img src=../common/uploads/fotosdeperfil/'.$foto.' width="240" height=300">'
+    if ($foto){
+        echo '<img src=../common/uploads/fotosdeperfil/'.$foto.' width="240" height=300">';
+    }
 ?>
 </div>
 </div>
