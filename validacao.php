@@ -27,9 +27,6 @@
                 $_SESSION['Nome'] = $f['nome'];
                 $_SESSION['Nivel'] = $f['Nivel'];
                 $achou = True;
-                echo $_SESSION['ID'];
-                echo $_SESSION['Nome'];
-                echo $_SESSION['Nivel']; 
                 session_write_close();
                 //Redireciona o usuário
 

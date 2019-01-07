@@ -18,17 +18,14 @@
       <form method="post" action="index.php" class="col-md-12">
       
         <h1>Novo usuário</h1>
-        <p>Preencha os campos abaixo para criar seu perfil.</p>
+        <p>Preencha os campos abaixo para criar um novo usuário.</p>
         
         <div class="row form-group">
           <div class="col-md-6">
             <label for="Nome"><b>Nome Completo</b></label>
-            <input class="form-control" type="text" placeholder="Digite seu nome e sobrenome..." name="Nome" required>
+            <input class="form-control" type="text" placeholder="Digite o nome e sobrenome..." name="Nome" required>
           </div>
-          <div class="col-md-3">
-            <label for="Data de Nascimento"><b>Data de Nascimento</b></label>
-            <input class="form-control" type="text" name="data de nascimento" placeholder="DD/MM/AAAA" required>
-          </div>
+          
           <div class="col-md-3">
             <label><b>Sexo:</b></label><br>
             <div class="custom-control custom-radio custom-control-inline">
@@ -58,34 +55,12 @@
             <label for="confirma_senha"><b>Confirmação de senha</b></label>
             <input class="form-control" type="password" placeholder="Digite novamente sua senha..." name="confirma_senha" required>
           </div>
-          <div class="col-md-6">
-            <label for="celular"><b>Celular</b></label>
-            <input class="form-control" type="text" placeholder="Digite seu número de celular..." name="celular" required>
-          </div>
-        </div>
-
-        <div class="row form-group">
-          <div class="col-md-6">
-            <label for="RG"><b>RG</b></label>
-            <input class="form-control" type="text" placeholder="Digite seu RG..." name="RG" required>
-          </div>
-          <div class="col-md-6">
-            <label for="Número USP"><b>Número USP</b></label>
-            <input class="form-control" type="text" placeholder="Digite seu Número USP..." name="Número USP" >
-          </div>
-        </div>
-
-        <div class="row form-group">
-          <div class="col-md-6">
-            <label for="Endereço"><b>Endereço</b></label>
-            <input class="form-control" type="text" placeholder="Digite seu Endereço..." name="Endereço" >
-          </div>
           
           <div  class="col-md-6" style="margin-top:4em;">
             <div class="col-md-3">
               <div class="custom-control custom-radio custom-control-inline">
                 <input class="custom-control-input" type="radio" name="nivel" id="n1" value="1"> 
-                <label for="n1" class="custom-control-label" style="padding-left:10px;">Alteta</label> 
+                <label for="n1" class="custom-control-label" style="padding-left:10px;">Atleta</label> 
               </div>
             </div>
             <div class="col-md-3">
@@ -138,16 +113,11 @@
 if ($_POST){
   $nome = $_POST['nome'];
   $sexo = $_POST['sexo'];
-  $data_de_nascimento = $_POST['data_de_nascimento'];
   $email = $_POST['email'];
   $senha = $_POST['senha'];
-  $celular = $_POST['celular'];
-  $RG = $_POST['RG'];
-  $NUSP = $_POST['NUSP'];
-  $endereco = $_POST['endereco'];
   $nivel = $_POST['nivel'];
   $con = mysqli_connect('localhost', 'root', '', 'sistema_wetrats');
-  $sql = "INSERT INTO usuarios (nome,sexo,data_de_nascimento,email,senha,celular,RG,NUSP,endereco,Nivel) VALUES ('".$nome."','".$sexo."','".$data_de_nascimento."','".$email."','".$senha."','".$celular."','".$RG."','".$NUSP."','".$endereco."','".$nivel."')";
+  $sql = "INSERT INTO usuarios (nome,sexo,email,senha,Nivel) VALUES ('".$nome."','".$sexo."','".$email."','".$senha."','".$nivel."')";
   $query = mysqli_query($con,$sql);
   echo "$sql";
   }
