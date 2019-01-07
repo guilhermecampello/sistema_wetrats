@@ -207,7 +207,7 @@ if ($_POST){
       $extensao = end($ext);
       if (strlen($extensao) > 0) { //verifica se não esta gravando um arquivo vazio 
         $novo_nome = "perfil"."$id_usuario".".".$extensao;
-        $diretorio = "../common/uploads/";
+        $diretorio = "../common/uploads/fotosdeperfil/";
         move_uploaded_file ($_FILES['foto']['tmp_name'], $diretorio.$novo_nome);
         // Grava no banco de dados
         $sql = "UPDATE usuarios SET nome = '$nome' , data_de_nascimento = '$data_de_nascimento' , email = '$email' , senha = '$senha' , celular = '$celular', RG = '$RG', NUSP = '$NUSP', endereco = '$endereco', foto = '$novo_nome', Nivel= '$nivel' WHERE id = $id_usuario ";

@@ -12,6 +12,33 @@
         //Redireciona para o login
         //header("Location: ../index.php"); exit;
 
+    //Inicia uma sessão
+    $id_usuario = $_SESSION['ID'];
+    $nivel_usuario = $_SESSION['Nivel'];
+    // Conexão com o servidor MySQL
+    $con = mysqli_connect('localhost', 'root', '', 'sistema_wetrats');
+
+    // Busca das informações referentes ao usuário que será editado
+    $sql =  "SELECT id, nome, sexo, data_de_nascimento, email, senha, celular, RG, NUSP, endereco, foto, Nivel FROM usuarios WHERE id = $id_usuario ";
+    $perfil = mysqli_query($con, $sql);
+    
+    while ($p = mysqli_fetch_array($perfil)){
+        $nome = $p['nome'];
+        $sexo = $p['sexo'];
+        $data_de_nascimento= $p['data_de_nascimento'];
+        $email = $p['email'];
+        $senha = $p['senha'];
+        $celular = $p['celular'];
+        $RG= $p['RG'];
+        $NUSP = $p['NUSP'];
+        $endereco = $p['endereco'];
+        $Nivel = $p['Nivel'];
+        $id = $p['id'];
+        $foto = $p['foto'];
+        
+
+    }
+
 ?>
 
 <html>
@@ -45,6 +72,7 @@
     }
 
     echo "<p>".$msg."</p>";
+    echo '<img src=../common/uploads/fotosdeperfil/'.$foto.' width="240" height=300">'
 ?>
 </div>
 </div>
